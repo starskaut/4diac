@@ -96,30 +96,6 @@ cat ~/project/core_dumps/crash_reports/*.report.txt
 ✅ Buffer overflow найден  
 ✅ SUMMARY.txt готов к сдаче  
 
-### Что сдавать
-
-1. SUMMARY.txt
-2. Все *.report.txt файлы
-3. Скриншоты вывода
-4. Анализ найденной уязвимости
-
-## 🔗 Ссылки
-
-- [Linux Core Dumps](https://averageradical.github.io/LinuxCoreDumps.pdf)
-- [GDB Documentation](https://sourceware.org/gdb/documentation/)
-- [WSL2 Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
-
-## 📝 Примечания
-
-- Работает в Linux пространстве (`~/project/`), НЕ в `/mnt/d/`
-- Core dump включен только в текущей сессии bash
-- Для постоянных настроек добавить в `~/.bashrc`
-- GDB требует root доступ для некоторых операций
-
-## 👤 Автор
-
-WSL2 Core Dump Analysis Lab v1.0  
-Дата: January 2026
 
 ---
 
