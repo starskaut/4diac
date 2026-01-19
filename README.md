@@ -8,17 +8,6 @@
 - ЛР3: Макет кода (vulnerable_runtime.py), фаззинг (fuzzer.py), анализ core (analyze_core.sh)
 - ЛР4: ПМИ (PMI.md → PMI.pdf), GitHub Actions для PDF, логи тестов
 
-## Структура
-├── PMI.md
-├── tz.md
-├── deploy_client.py
-├── vulnerable_runtime.py
-├── fuzzer.py
-├── analyze_core.sh
-├── setup_core.sh
-├── test_command.xml
-└── .github/workflows/build_pdf.yml
-
 ## Запуск
 python vulnerable_runtime.py
 python deploy_client.py
