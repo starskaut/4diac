@@ -1,8 +1,8 @@
-# Core Dump Analysis Lab - WSL2
+# Макет среды разработки для IEC 61499 (вариант 1 — аналог 4diac)
 
-Автоматизированная лабораторная работа для анализа core dump файлов в WSL2 Linux окружении.
+Репозиторий для лабораторных работ по дисциплине "Инструментальные средства информационных систем".
 
-## 🚀 Быстрый старт
+##  Быстрый старт
 
 ### Одна команда запуска
 
@@ -10,7 +10,7 @@
 cd ~/project && echo "1. ДИАГНОСТИКА" && pwd && cat /proc/sys/kernel/core_pattern && ulimit -c && ls -la *.py *.sh && echo "2. ТЕСТ" && rm -f core.* && ulimit -c unlimited && echo "core.%e.%p.%t" | sudo tee /proc/sys/kernel/core_pattern && python3 -c "import os; os.kill(os.getpid(), 11)" && echo "CORE:" && ls -lh core.* && echo "3. ПОЛНЫЙ ЗАПУСК" && pkill -f python && rm -f core.* && chmod +x *.sh && ./setup_core.sh && python3 vulnerable_runtime.py & sleep 2 && python3 fuzzer.py && ./analyze_core.sh python3 && echo "4. РЕЗУЛЬТАТЫ" && ls -lh core.* && cat core_dumps/crash_reports/SUMMARY.txt
 ```
 
-## 📁 Структура проекта
+##  Структура проекта
 
 ```
 ~/project/
@@ -23,7 +23,7 @@ cd ~/project && echo "1. ДИАГНОСТИКА" && pwd && cat /proc/sys/kernel/
 └── README.md                  # Этот файл
 ```
 
-## 💾 Установка
+##  Установка
 
 ### Предварительно
 - WSL2 Ubuntu 22.04
@@ -44,7 +44,7 @@ sudo apt update
 sudo apt install python3 python3-pip gdb
 ```
 
-## ▶️ Запуск
+##  Запуск
 
 ### Полный запуск (все тесты)
 
