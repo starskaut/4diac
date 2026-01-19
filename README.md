@@ -44,17 +44,3 @@ sudo apt update
 sudo apt install python3 python3-pip gdb
 ```
 
-##  Запуск
-
-### Полный запуск (все тесты)
-
-```bash
-cd ~/project
-ulimit -c unlimited
-chmod +x *.sh
-./setup_core.sh
-python3 vulnerable_runtime.py &
-sleep 2
-python3 fuzzer.py
-./analyze_core.sh python3
-```
