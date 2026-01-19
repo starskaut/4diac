@@ -99,4 +99,3 @@ cat ~/project/core_dumps/crash_reports/*.report.txt
 
 ---
 
-**Готово к лабораторной работе!** 🎓
