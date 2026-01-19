@@ -59,34 +59,6 @@ python3 fuzzer.py
 ./analyze_core.sh python3
 ```
 
-## 📊 Результаты
-
-### Core файлы
-
-```bash
-ls -lh ~/project/core.*
-```
-
-Ожидаемый размер: 5MB+
-
-### GDB отчёты
-
-```bash
-cat ~/project/core_dumps/crash_reports/SUMMARY.txt
-```
-
-### Детальный backtrace
-
-```bash
-cat ~/project/core_dumps/crash_reports/*.report.txt
-```
-
-### Открыть в Windows
-
-```
-\\wsl$\Ubuntu-22.04\home\<username>\project\core_dumps\crash_reports\
-```
-
 ## 📚 Лабораторная работа
 
 ### Ожидаемый результат
