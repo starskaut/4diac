@@ -7,7 +7,7 @@
 ### Одна команда запуска
 
 ```bash
-cd ~/project && ulimit -c unlimited && echo "core.%e.%p.%t" | sudo tee /proc/sys/kernel/core_pattern && chmod +x *.sh && ./setup_core.sh && python3 vulnerable_runtime.py & sleep 2 && python3 fuzzer.py && ./analyze_core.sh python3
+cd ~/project && echo "1. ДИАГНОСТИКА" && pwd && cat /proc/sys/kernel/core_pattern && ulimit -c && ls -la *.py *.sh && echo "2. ТЕСТ" && rm -f core.* && ulimit -c unlimited && echo "core.%e.%p.%t" | sudo tee /proc/sys/kernel/core_pattern && python3 -c "import os; os.kill(os.getpid(), 11)" && echo "CORE:" && ls -lh core.* && echo "3. ПОЛНЫЙ ЗАПУСК" && pkill -f python && rm -f core.* && chmod +x *.sh && ./setup_core.sh && python3 vulnerable_runtime.py & sleep 2 && python3 fuzzer.py && ./analyze_core.sh python3 && echo "4. РЕЗУЛЬТАТЫ" && ls -lh core.* && cat core_dumps/crash_reports/SUMMARY.txt
 ```
 
 ## 📁 Структура проекта
